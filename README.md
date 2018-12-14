@@ -10,7 +10,8 @@
 ### play_with_AI.py : This is the python program in which you can play with a AI with tree depth of 3
 ### graphics.py: This is a py file which provide graphics and source of user interfaces. This is a copy of other's code
 ### simulation.py: This is the py file for Monte Carlo simulation. The program simulating 100 games a time using 2 AIs.
-### result.txt: Result so far
+### simulation_final_version: Final version of our simulation
+### 590 doc.xlsx: Result so far
 
 # Title: A Chess Game: Gomoku(Five in a row)
 
