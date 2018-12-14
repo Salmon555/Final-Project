@@ -39,7 +39,7 @@
 ### If we change the rule to six in a row to win, this game will hardly end and there will be tie for almost every game.
 ### We can only do the Monte Carlo Simulation in the tree depth of 1 due to the high time complexity, the disadvantage of this is that the AI is too stupid.
 ### If we can set up the tree depth to 3, or even 5. The AI will be very smart and the result will be more convincing.
-
+### We tried to apply numba to accelerate the program. It turned out that numba is not approriate in most of our function and will increase the running time. However, I tried to apply it in function call game_win, this will decrease the running time of 10 games from 22.19 to 19.98 by taking the average of ten attempts.
 
 ## Instructions on how to use the program:
 ### Run play_with_AI.py to play the game of Gomoku 
