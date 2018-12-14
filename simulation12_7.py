@@ -3,6 +3,8 @@ from math import *
 import numpy as np
 import time  # Sometimes using time.sleep() for better observing the result.
 import random
+from numba import jit # using numba to make it faster
+
 
 GRID_WIDTH = 40
 
@@ -329,7 +331,7 @@ def cal_score(success_num, m, n, x_decrict, y_derice, enemy_list, my_list, score
 
     return add_score + max_score_shape[0]
 
-
+@jit
 def game_win(success_num, list, x, y):
     """
     to determine after the last stone(x,y), whether this given side is win. To be more specific, firstly, we get the coordinate
@@ -468,6 +470,7 @@ def process(success_num):
 
 
 def main():
+    start_time=time.time()
     white_win, black_win, tiegame = 0, 0, 0
     for i in range(0, 1):  ## simulate the game 100 times in a program
         new = process(5)  # change the parameter to 4 or 5 to change the rule of the game(five in a row or four in a row)
@@ -481,7 +484,9 @@ def main():
     print("white_win is " + str(white_win))  # Print out all results in 100 games
     print("black_win is " + str(black_win))
     print("tiegame is " + str(tiegame))
-
+    end_time=time.time()
+    running_time=end_time-start_time
+    print(running_time)
 
 # main()
 if __name__ == '__main__':
