@@ -10,7 +10,7 @@
 ### play_with_AI.py : This is the python program in which you can play with a AI with tree depth of 3
 ### graphics.py: This is a py file which provide graphics and source of user interfaces. This is a copy of other's code
 ### simulation.py: This is the py file for Monte Carlo simulation. The program simulating 100 games a time using 2 AIs.
-### simulation_final_version: Final version of our simulation
+### simulation_final_version: Final version of our simulation (inlcude 5-in-a-row and 4-in-a-row)
 ### 590 doc.xlsx: Result so far
 
 # Title: A Chess Game: Gomoku(Five in a row)
@@ -30,7 +30,7 @@
 ### The further your first move away from the center, the less winning rate you will get.
 
 ## Our experiment:
-### Due to the time complexity, we tested 5 different first move, each move has 1000 games played by 2 AIs.
+### Due to the time complexity, we tested 7 different first move for 2 different rules of 4-in-a-row and 5-in-a-row, each move has 1000 games played by 2 AIs.
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
 ### The best first move should is in the center, and the difference between center and 1 step from it is not obvious due to the large board.
