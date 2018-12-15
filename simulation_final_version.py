@@ -472,7 +472,7 @@ def process(success_num):
 def main():
     start_time=time.time()
     white_win, black_win, tiegame = 0, 0, 0
-    for i in range(0, 1):  ## simulate the game 100 times in a program
+    for i in range(0, 100):  ## simulate the game 100 times in a program
         new = process(5)  # change the parameter to 4 or 5 to change the rule of the game(five in a row or four in a row)
         if (new == 1):
             white_win += 1
