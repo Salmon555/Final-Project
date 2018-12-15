@@ -11,7 +11,8 @@
 ### graphics.py: This is a py file which provide graphics and source of user interfaces. This is a copy of other's code
 ### simulation.py: This is the py file for Monte Carlo simulation. The program simulating 100 games a time using 2 AIs.
 ### simulation_final_version: Final version of our simulation (inlcude 5-in-a-row and 4-in-a-row determined by parameter success_num)
-### 590 doc.xlsx: Result so far
+### result.txt: Result so far
+### Result Analysis.pdf: the Resutl analysis according to the test result of 5 stone rule and 4 stone rule
 
 # Title: A Chess Game: Gomoku(Five in a row)
 
