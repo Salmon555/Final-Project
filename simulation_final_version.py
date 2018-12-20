@@ -14,7 +14,7 @@ ROW = 15
 # global start_point
 start_point = (7, 7)
 list1 = []  # AI with White stones
-list2=[]
+list2 =[]
 list2.append(start_point)  # AI with black stones.(The first move should be set up here)
 list3 = []
 list3.append(start_point)  # Recording all stones
