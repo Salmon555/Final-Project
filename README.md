@@ -10,8 +10,9 @@
 ### play_with_AI.py : This is the python program in which you can play with a AI with tree depth of 3
 ### graphics.py: This is a py file which provide graphics and source of user interfaces. This is a copy of other's code
 ### simulation.py: This is the py file for Monte Carlo simulation. The program simulating 100 games a time using 2 AIs.
-### simulation_final_version: Final version of our simulation
-### 590 doc.xlsx: Result so far
+### simulation_final_version: Final version of our simulation (inlcude 5-in-a-row and 4-in-a-row determined by parameter success_num)
+### result.txt: Result so far
+### Result Analysis.pdf: the Result analysis according to the test result of 5 stone rule and 4 stone rule for 7 different first move
 
 # Title: A Chess Game: Gomoku(Five in a row)
 
@@ -30,7 +31,7 @@
 ### The further your first move away from the center, the less winning rate you will get.
 
 ## Our experiment:
-### Due to the time complexity, we tested 5 different first move, each move has 1000 games played by 2 AIs.
+### Due to the time complexity, we tested 7 different first move for 2 different rules of 4-in-a-row and 5-in-a-row, each move has 1000 games played by 2 AIs.
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
 ### The best first move should is in the center, and the difference between center and 1 step from it is not obvious due to the large board.
@@ -49,3 +50,8 @@
 ## All Sources Used:
 ### https://github.com/colingogogo/gobang_AI 
 ### And some website explaining the algorithm of game tree and prunning.
+
+# Run the code
+### 1.Change the amount of simulation time:line 482. Because of its complexity, to get a 1000 times simulation result, we run it 100 times each time. For 5-in-a-row, a laptop with intel core5 spends around 7 minutes to do 100 times simulaiton.And for 4-in-a-row, a laptop with intel core5 spends less than 1 minutes to do 100 times simulaiton.
+### 2.Change the rule(4-in-a-row or 5-in-a-row):line 483.
+### 3.Change the start position:line 15. To change the start position from (1,7) to (7,7)
