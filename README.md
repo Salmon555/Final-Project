@@ -50,3 +50,8 @@
 ## All Sources Used:
 ### https://github.com/colingogogo/gobang_AI 
 ### And some website explaining the algorithm of game tree and prunning.
+
+# Run the code
+### 1.Change the amount of simulation time:line 482. Because of its complexity, to get a 1000 times simulation result, we run it 100 times each time. For 5-in-a-row, a laptop with intel core5 spends around 7 minutes to do 100 times simulaiton.And for 4-in-a-row, a laptop with intel core5 spends less than 1 minutes to do 100 times simulaiton.
+### 2.Change the rule(4-in-a-row or 5-in-a-row):line 483.
+### 3.Change the start position:line 15. To change the start position from (1,7) to (7,7)
