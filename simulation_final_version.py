@@ -11,9 +11,13 @@ GRID_WIDTH = 40
 COLUMN = 15
 ROW = 15
 
+# global start_point
+start_point = (7, 7)
 list1 = []  # AI with White stones
-list2 = [(7, 7), ]  # AI with black stones.(The first move should be set up here)
-list3 = [(7, 7), ]  # Recording all stones
+list2=[]
+list2.append(start_point)  # AI with black stones.(The first move should be set up here)
+list3 = []
+list3.append(start_point)  # Recording all stones
 
 list_all = []  # points of all boards
 next_point = []  # best next move for AI
@@ -412,11 +416,12 @@ def game_win(success_num, list, x, y):
 
     return False
 
-def process(success_num):
+def process(success_num,start):
     """
     one time of the whole simulation process
     :param success_num: define the rule of the game, if success_num equals 4, it means one player succeeds when he got 4 in a row;
     if success_num is 5, it represents five stones in a row means success.
+    :param start: the start position
     :return: ans=0 means a tie game; ans=1 means white stone wins; ans=-1 means black stone wins
     """
     global list3
@@ -462,8 +467,10 @@ def process(success_num):
                 ans = 0
 
     list1 = []  # Reset all the list after one game
-    list2 = [(7, 7), ]
-    list3 = [(7, 7), ]
+    list2=[]
+    list2.append(start)
+    list3 = []
+    list3.append(start)
     list_all = []
     next_point = []
     return ans
@@ -473,7 +480,7 @@ def main():
     start_time=time.time()
     white_win, black_win, tiegame = 0, 0, 0
     for i in range(0, 100):  ## simulate the game 100 times in a program
-        new = process(5)  # change the parameter to 4 or 5 to change the rule of the game(five in a row or four in a row)
+        new = process(4,start_point)  # change the parameter to 4 or 5 to change the rule of the game(five in a row or four in a row)
         if (new == 1):
             white_win += 1
         elif (new == -1):
